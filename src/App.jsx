@@ -1,10 +1,14 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Column from "./components/Column";
 import AddTask from "./components/AddTask";
 import bgImage from "./assets/bg.png";
 
 function App() {
-  const [tasks, setTasks] = useState([]);
+ const [tasks, setTasks] = useState(() => {
+  const saved = localStorage.getItem("kanbanTasks");
+  return saved ? JSON.parse(saved) : [];
+});
+
 
   const addTask = (title, priority) => {
     const newTask = {
@@ -35,6 +39,10 @@ function App() {
       )
     );
   };
+
+useEffect(() => {
+  localStorage.setItem("kanbanTasks", JSON.stringify(tasks));
+}, [tasks]);
 
   return (
     <div
