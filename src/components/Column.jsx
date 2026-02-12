@@ -4,7 +4,7 @@ function Column({ title, status, tasks, deleteTask, moveTask }) {
   const filteredTasks = tasks.filter((task) => task.status === status);
 
   return (
-    <div className="bg-white rounded-xl shadow-md p-4">
+    <div className="bg-white/20 backdrop-blur-xl border border-white/30 rounded-2xl shadow-xl p-5">
       <h2 className="text-xl font-semibold mb-4">{title}</h2>
 
       <div className="space-y-4">

@@ -1,15 +1,18 @@
 import { useState } from "react";
 import Column from "./components/Column";
 import AddTask from "./components/AddTask";
+import bgImage from "./assets/bg.png";
+
 
 function App() {
   const [tasks, setTasks] = useState([]);
 
-  const addTask = (title) => {
+  const addTask = (title,priority) => {
     const newTask = {
       id: Date.now(),
       title,
       status: "todo",
+      priority,
     };
     setTasks([...tasks, newTask]);
   };
@@ -27,8 +30,15 @@ function App() {
   };
 
   return (
-    <div className="min-h-screen bg-gray-100 p-6">
-      <h1 className="text-3xl font-bold text-center mb-8">
+  <div
+    className="min-h-screen bg-cover bg-center relative"
+    style={{ backgroundImage: `url(${bgImage})` }}
+  >
+    {/* Dark overlay */}
+    <div className="absolute inset-0 bg-black/10 backdrop-blur-sm"></div>
+
+    <div className="relative z-10 p-6">
+      <h1 className="text-4xl font-bold text-center text-white mb-8">
         Kanban Task Board
       </h1>
 
@@ -58,7 +68,7 @@ function App() {
         />
       </div>
     </div>
-  );
+  </div>
+);
 }
-
 export default App;
