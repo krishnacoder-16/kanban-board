@@ -1,16 +1,117 @@
-# React + Vite
+# 📋 Kanban Task Board – React.js
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 📸 Project Preview
+![Project Preview](assets/ui.png)
 
-Currently, two official plugins are available:
+## 🔗 Live Demo:
+👉 [https://react-kanban-board-phi.vercel.app/](https://react-kanban-board-phi.vercel.app/)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+A modern, responsive Kanban Task Management Board built using React.js and Tailwind CSS.
 
-## React Compiler
+This project focuses on component-based architecture, state management, UI design, and localStorage persistence, following modern frontend development practices.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🚀 Features
 
-## Expanding the ESLint configuration
+### ✅ Level 1 – Core Functionality
+- Add new tasks
+- Move tasks between:
+  - To Do
+  - In Progress
+  - Done
+- Delete tasks
+- Responsive 3-column layout
+- Clean glassmorphism-inspired UI
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+### ✅ Level 2 – Enhanced Functionality
+- ✏️ **Inline Editing** (Click → Edit → Auto Save)
+- 🎯 **Priority System** (High / Medium / Low)
+- 🎨 **Color-Coded Priority Borders:**
+  - 🔴 High – Red
+  - 🟡 Medium – Yellow
+  - 🟢 Low – Green
+- 💾 **localStorage Persistence**
+  - Tasks remain saved even after page refresh.
+
+## 🧠 Key Design Decisions
+
+- **Component-Based Structure**
+  - Modular components: `App`, `Column`, `TaskCard`, `AddTask`.
+- **State Lifting**
+  - All task logic is handled in `App.jsx` for centralized state control.
+- **Immutability Principles**
+  - State updates use `map()` and `filter()` for safe data handling.
+- **Persistent Storage**
+  - Lazy state initialization from localStorage to prevent overwrite issues.
+- **Modern UI Approach**
+  - Glassmorphism design with blurred background and soft gradients.
+
+## 📂 Project Structure
+```
+kanban-board/
+│
+├── assets/
+│   └── ui.png               # Screenshot for README
+│
+├── src/
+│   ├── components/
+│   │   ├── AddTask.jsx
+│   │   ├── Column.jsx
+│   │   └── TaskCard.jsx
+│   │
+│   ├── App.jsx              # Main state & logic
+│   ├── main.jsx
+│   └── index.css
+│
+├── tailwind.config.js
+├── vite.config.js
+├── package.json
+├── README.md
+└── Prompts.md
+```
+
+## 🛠️ Technologies Used
+- ⚛️ **React.js** (Functional Components + Hooks)
+- 🎨 **Tailwind CSS** (Utility-first styling)
+- ⚡ **Vite** (Fast build tool)
+- 🌐 **Vercel** (Deployment)
+
+## 🧪 How to Run Locally
+
+1️⃣ **Clone the repository:**
+```bash
+git clone <your-repo-link>
+cd kanban-board
+```
+
+2️⃣ **Install dependencies:**
+```bash
+npm install
+```
+
+3️⃣ **Start development server:**
+```bash
+npm run dev
+```
+
+4️⃣ **Open:**
+[http://localhost:5173](http://localhost:5173)
+
+## 🌍 Deployment
+The project is deployed on Vercel:
+👉 [https://react-kanban-board-phi.vercel.app/](https://react-kanban-board-phi.vercel.app/)
+
+Every push to main automatically redeploys the project.
+
+## 🤖 AI Assistance Disclaimer
+AI tools were used for:
+- Debugging React state issues
+- Resolving Tailwind configuration errors
+- Fixing localStorage persistence edge cases
+- Improving component structure and logic clarity
+
+All code was manually implemented, tested, and optimized.
+Detailed prompts are documented in `Prompts.md`.
+
+## 👨💻 Author
+**Krishna Kumar**
+Frontend Developer Intern – Prodesk IT
