@@ -1,7 +1,7 @@
 # 📋 Kanban Task Board – React.js
 
 ## 📸 Project Preview
-![Project Preview](./assets/ui.png)
+![Project Preview](./src/assets/ui.png)
 
 ## 🔗 Live Demo:
 👉 [https://react-kanban-board-phi.vercel.app/](https://react-kanban-board-phi.vercel.app/)
